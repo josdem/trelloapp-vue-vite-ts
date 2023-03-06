@@ -20,7 +20,7 @@ export const startServer = (): PluginOption => {
   const history = require('connect-history-api-fallback');
   const middleware = require('./middleware');
 
-  const router = jsonServer.router('./backend/data/database.json');
+  const router = jsonServer.router(__dirname + '/data/database.json');
 
   app.db = router.db;
   app.use(history());

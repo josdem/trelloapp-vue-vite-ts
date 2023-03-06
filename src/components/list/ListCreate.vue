@@ -31,14 +31,14 @@
       />
     </div>
   </div>
-  <div
+  <button
     v-else
-    class="p-2.5 ml-3 w-list text-sm text-gray-50 bg-white bg-opacity-20 hover:bg-opacity-30 rounded cursor-pointer flex-no-shrink"
+    class="p-2.5 ml-3 text-left w-list text-sm text-gray-50 bg-white bg-opacity-20 hover:bg-opacity-30 rounded cursor-pointer flex-no-shrink"
     data-cy="create-list"
     @click="enableInput()"
   >
     <Plus class="inline-block w-3 h-3" /> {{ !lists.length ? 'Add a list' : 'Add another list' }}
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">

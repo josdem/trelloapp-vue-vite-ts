@@ -4,9 +4,9 @@
     @click="$emit('toggleInput', true)"
   >
     <Plus class="inline-block w-3 h-3" />
-    <div data-cy="new-card">
+    <button data-cy="new-card">
       Add another card
-    </div>
+    </button>
   </div>
 </template>
 
