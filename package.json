@@ -68,6 +68,7 @@
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
+    "@applitools/eyes-webdriverio": "^5.42.0",
     "@cypress/skip-test": "^2.6.1",
     "@testing-library/vue": "^6.6.1",
     "@types/leaflet": "^1.7.11",

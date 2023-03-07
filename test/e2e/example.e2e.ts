@@ -1,4 +1,4 @@
-import { browser, $$ } from '@wdio/globals'
+import { browser, $, $$, expect } from '@wdio/globals'
 
 const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms))
 

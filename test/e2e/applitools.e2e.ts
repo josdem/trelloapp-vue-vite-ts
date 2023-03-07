@@ -1,4 +1,4 @@
-import { browser } from '@wdio/globals'
+import { expect, $, $$, browser } from '@wdio/globals'
 import { Key } from 'webdriverio'
 
 describe('Trello Application', () => {
@@ -10,6 +10,9 @@ describe('Trello Application', () => {
     await $('aria/Name of your first board').setValue('Let the Engineers Speak')
     await browser.keys(Key.Enter)
     await expect(browser).toHaveUrlContaining('/board/1')
+    
+    // @ts-expect-error
+    await browser.eyesCheck('Empty board')
   })
 
   it('can add a list on the board', async () => {
@@ -36,6 +39,9 @@ describe('Trello Application', () => {
     await $('aria/Enter a title for this card...').addValue('Visual Testing')
     await browser.keys(Key.Enter)
     await expect($$('div[data-cy="card"]')).toBeElementsArrayOfSize(3)
+
+    // @ts-expect-error
+    await browser.eyesCheck('board with items')
   })
 
   it('can close adding more cards', async () => {
@@ -52,13 +58,16 @@ describe('Trello Application', () => {
   it('can delete a board', async () => {
     await $('aria/Let the Engineers Speak').parentElement().nextElement().nextElement().click()
     await $('aria/Delete board').click()
+    await browser.refresh()
     await expect($('aria/Get started!')).toBePresent()
+    
+    // @ts-expect-error
+    await browser.eyesCheck('after board deletion')
   })
 
   it('can find links with partial or full text selector', async () => {
     const linkText = '...powered by coffee and love ❤️  Filip Hric'
     await expect($(`=${linkText}`)).toHaveText(linkText)
     await expect($('*=coffee and love')).toHaveText(linkText)
-    await browser.debug()
   })
 })
