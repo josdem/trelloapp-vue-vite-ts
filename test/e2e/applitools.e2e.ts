@@ -11,7 +11,6 @@ describe('Trello Application', () => {
     await browser.keys(Key.Enter)
     await expect(browser).toHaveUrlContaining('/board/1')
     
-    // @ts-expect-error
     await browser.eyesCheck('Empty board')
   })
 
@@ -40,7 +39,6 @@ describe('Trello Application', () => {
     await browser.keys(Key.Enter)
     await expect($$('div[data-cy="card"]')).toBeElementsArrayOfSize(3)
 
-    // @ts-expect-error
     await browser.eyesCheck('board with items')
   })
 
@@ -61,7 +59,6 @@ describe('Trello Application', () => {
     await browser.refresh()
     await expect($('aria/Get started!')).toBePresent()
     
-    // @ts-expect-error
     await browser.eyesCheck('after board deletion')
   })
 
@@ -70,4 +67,9 @@ describe('Trello Application', () => {
     await expect($(`=${linkText}`)).toHaveText(linkText)
     await expect($('*=coffee and love')).toHaveText(linkText)
   })
+})
+
+after(async () => {
+  const results = await browser.eyesGetAllTestResults()
+  console.log(results)
 })

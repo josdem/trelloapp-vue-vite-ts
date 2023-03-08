@@ -1,14 +1,25 @@
+import * as fs from 'node:fs/promises'
 import * as path from 'node:path'
 import * as cp from 'node:child_process'
-import { BrowserType, ScreenOrientation, DeviceName } from '@applitools/eyes-webdriverio'
+import { SevereServiceError } from 'webdriverio'
 
-// @ts-expect-error
-import * as EyesService from '@applitools/eyes-webdriverio/service'
+const EyesService = require('@applitools/eyes-webdriverio/service')
 
 import { config as baseConfig } from './wdio.conf'
 
-
 let viteServerProcess: cp.ChildProcess
+
+/**
+ * extend browser object with custom commands added by Applitools service
+ */
+declare global {
+    namespace WebdriverIO {
+        interface Browser {
+            eyesGetAllTestResults: () => Promise<any>
+            eyesCheck: (name: string) => Promise<unknown>
+        }
+    }
+}
 
 export const config = {
     ...baseConfig,
@@ -37,6 +48,14 @@ export const config = {
             { cwd: path.join(__dirname, '..') }
         )
         await browser.pause(1000)
+
+        /**
+         * reset database
+         */
+        await fs.writeFile(
+            path.join(__dirname, '..', 'backend', 'data', 'database.json'),
+            JSON.stringify({ boards: [], cards: [], lists: [], users: [] })
+        )
     },
     after: () => {
         if (viteServerProcess) {

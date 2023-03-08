@@ -1,56 +1,6 @@
 {
-  "boards": [
-    {
-      "name": "Let the Engineers Speak",
-      "user": 0,
-      "starred": true,
-      "created": "2023-03-06",
-      "id": 1
-    }
-  ],
-  "cards": [
-    {
-      "order": 0,
-      "boardId": 1,
-      "listId": 1,
-      "name": "Selectors",
-      "created": "2023-03-06",
-      "deadline": "2023-03-09",
-      "description": "",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "order": 1,
-      "boardId": 1,
-      "listId": 1,
-      "name": "Shadow DOM",
-      "created": "2023-03-06",
-      "deadline": "2023-03-09",
-      "description": "",
-      "completed": false,
-      "id": 2
-    },
-    {
-      "order": 2,
-      "boardId": 1,
-      "listId": 1,
-      "name": "Visual Testing",
-      "created": "2023-03-06",
-      "deadline": "2023-03-09",
-      "description": "",
-      "completed": false,
-      "id": 3
-    }
-  ],
-  "lists": [
-    {
-      "boardId": 1,
-      "name": "Talking Points",
-      "order": 0,
-      "created": "2023-03-06",
-      "id": 1
-    }
-  ],
+  "boards": [],
+  "cards": [],
+  "lists": [],
   "users": []
 }
