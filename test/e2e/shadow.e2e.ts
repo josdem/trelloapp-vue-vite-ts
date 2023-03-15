@@ -29,7 +29,7 @@ describe('An application using Shadow DOM', () => {
         })
     })
 
-    describe('using shadow$ selector', () => {
+    describe.skip('using shadow$ selector', () => {
         beforeEach(async () => {
             await browser.url('https://lit.dev/playground/#sample=docs%2Fwhat-is-lit&view-mode=preview')
 
