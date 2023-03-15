@@ -47,7 +47,7 @@ describe('Trello Application', () => {
     await expect($(() => (
       [...document.querySelectorAll('input')]
         .find((input) => input.value === 'Talking Points')
-    )))
+    ))).toBePresent()
   })
 
   it('can add a card to the list', async () => {
@@ -83,6 +83,5 @@ describe('Trello Application', () => {
     const linkText = '...powered by coffee and love ❤️  Filip Hric'
     await expect($(`=${linkText}`)).toHaveText(linkText)
     await expect($('*=coffee and love')).toHaveText(linkText)
-    await browser.debug()
   })
 })

@@ -1,7 +1,6 @@
 import * as fs from 'node:fs/promises'
 import * as path from 'node:path'
 import * as cp from 'node:child_process'
-import { SevereServiceError } from 'webdriverio'
 
 const EyesService = require('@applitools/eyes-webdriverio/service')
 

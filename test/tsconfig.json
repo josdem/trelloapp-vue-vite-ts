@@ -1,6 +1,7 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
+        "experimentalDecorators": true,
         "module": "CommonJS"
     },
     "include": ["../src/shims-vue.d.ts"]
