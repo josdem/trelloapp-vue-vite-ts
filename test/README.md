@@ -12,8 +12,16 @@ npm run wdio:selectors -- --watch
 
 ## Shadow Selectors
 
+Run example as component test:
+
 ```sh
 npm run wdio:shadow -- --watch
+```
+
+Run example as e2e test:
+
+```sh
+npm run wdio:shadow:e2e
 ```
 
 ## Applitools Example

@@ -9,6 +9,7 @@
     "postinstall": "echo \"Trello app was installed sucessfully ✅\nYou can now run it by typing:\nnpm start\"",
     "wdio:selectors": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/App.test.ts",
     "wdio:shadow": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/Timer.test.ts",
+    "wdio:shadow:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/shadow.e2e.ts",
     "wdio:applitools": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/applitools.e2e.ts"
   },
   "dependencies": {
@@ -72,10 +73,10 @@
     "@cypress/skip-test": "^2.6.1",
     "@testing-library/vue": "^6.6.1",
     "@types/leaflet": "^1.7.11",
-    "@wdio/browser-runner": "^8.6.0",
-    "@wdio/cli": "^8.6.0",
-    "@wdio/local-runner": "^8.6.0",
-    "@wdio/mocha-framework": "^8.5.6",
+    "@wdio/browser-runner": "^8.6.2",
+    "@wdio/cli": "^8.6.2",
+    "@wdio/local-runner": "^8.6.2",
+    "@wdio/mocha-framework": "^8.6.1",
     "@wdio/spec-reporter": "^8.4.0",
     "chromedriver": "^110.0.0",
     "cypress": "^10.4.0",
