@@ -1,15 +1,23 @@
-# WebdriverIO Selectors
+# Let The Engineers Speak
 
-Foobar
+![Let The Engineer Speak](https://media.licdn.com/dms/image/C5622AQE-QyUgeosBrA/feedshare-shrink_2048_1536/0/1677689696255?e=1681948800&v=beta&t=MCWsNBFCTLEMoJlAg4joCG3eM7nPdrsqVx-M8mF6nj8 "Let The Engineer Speak")
 
-```js
-$('foo')
+# Selectors
+
+## Walkthrough Demo
+
+```sh
+npm run wdio:selectors -- --watch
 ```
 
-```sh { interactive=false mimeType=image/png }
-node --no-warnings ./examples/cssSelector.js --no-warnings
+## Shadow Selectors
+
+```sh
+npm run wdio:shadow -- --watch
 ```
 
-```sh { interactive=false mimeType=image/png }
-cat ../foo.png 2>/dev/null
+## Applitools Example
+
+```sh
+npm run wdio:applitools
 ```
