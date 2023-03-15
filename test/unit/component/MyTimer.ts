@@ -2,9 +2,22 @@ import {LitElement, html, css} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
 import {play, pause, replay} from './icons.js';
 
+@customElement("timer-display")
+export class TimerDisplay extends LitElement {
+  static styles = css`
+    span { color: #EA5907; }
+  `
+
+  render() {
+    return html`
+      <span><slot></slot></span>
+    `
+  }
+}
+
 @customElement("my-timer")
 export class MyTimer extends LitElement {
-  static styles = css`/* playground-fold */
+  static styles = css`
     @import("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap")
 
     :host {
@@ -28,7 +41,7 @@ export class MyTimer extends LitElement {
       user-select: none;
       font-size: 0.6em;
     }
-    /* playground-fold-end */`;
+    `;
 
   @property() duration = 60;
   @state() private end: number | null = null;
@@ -40,7 +53,7 @@ export class MyTimer extends LitElement {
     const sec = pad(min, Math.floor(remaining / 1000 % 60));
     const hun = pad(true, Math.floor(remaining % 1000 / 10));
     return html`
-      <span>${min ? `!!${min}:${sec}` : `${sec}.${hun}`}</span>
+      <timer-display>${min ? `!!${min}:${sec}` : `${sec}.${hun}`}</timer-display>
       <footer>
         ${remaining === 0 ? '' : running ?
           html`<button @click=${this.pause}>${pause}</button>` :
@@ -49,7 +62,6 @@ export class MyTimer extends LitElement {
       </footer>
     `;
   }
-  /* playground-fold */
 
   start() {
     this.end = Date.now() + this.remaining;
@@ -80,11 +92,10 @@ export class MyTimer extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.reset();
-  }/* playground-fold-end */
+  }
 
 }
-/* playground-fold */
 
 function pad(pad: unknown, val: number) {
   return pad ? String(val).padStart(2, '0') : val;
-}/* playground-fold-end */
+}
