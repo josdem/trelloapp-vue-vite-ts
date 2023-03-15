@@ -13,6 +13,15 @@ import App from '../../src/App.vue';
 import '../../src/index.css';
 
 /**
+ * custom selector fetch cards by containing text
+ */
+await browser.addLocatorStrategy('cardsWithValue', (selector, root) => {
+  const rootNode = root || document.body
+  return [...rootNode.querySelectorAll('div')].filter(
+    (div) => div.children.length === 0 && div.innerText && div.innerText.includes(selector || ''))
+})
+
+/**
  * This test file showcases use of several selector strategies used in WebdriverIO.
  * 
  * Why using accessibility selectors over other types of selectors?
@@ -60,6 +69,12 @@ describe('Trello Application', () => {
     await $('aria/Enter a title for this card...').addValue('Visual Testing')
     await browser.keys(Key.Enter)
     await expect($$('div[data-cy="card"]')).toBeElementsArrayOfSize(3)
+
+    /**
+     * use a custom selector registered at the top of the file
+     * this finds all cards containing an `o` character
+     */
+    expect(await browser.custom$$('cardsWithValue', 'o').length).toBe(2)
   })
 
   it('can close adding more cards', async () => {
@@ -76,6 +91,10 @@ describe('Trello Application', () => {
   it('can delete a board', async () => {
     await $('aria/Let the Engineers Speak').parentElement().nextElement().nextElement().click()
     await $('aria/Delete board').click()
+
+    await $('aria/Log in').click()
+    await $('nav button').click()
+
     await expect($('aria/Get started!')).toBePresent()
   })
 

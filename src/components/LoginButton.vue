@@ -11,7 +11,7 @@
       @click="router.push('/login')"
     >
       <User class="self-center ml-2 w-6 h-6" />
-      <span class="self-center pr-2 pl-1">Log&nbsp;in</span>
+      <span class="self-center pr-2 pl-1">Log in</span>
     </div>
     <!-- LOGGED IN -->
     <div
