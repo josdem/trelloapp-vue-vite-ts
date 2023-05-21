@@ -18,7 +18,7 @@ describe('Trello Application', () => {
       //Select by name - Sparingly: Coupled to the name attribute which has HTML semantics.
       //await $('[name="newBoard"]').setValue('My Board')
 
-      //Select by custom data attribute - Prefered: Decoupled and not connected to a11y
+      //Select by custom data attribute - Good: Decoupled and not connected to a11y
       await $('[data-cy="first-board"]').setValue('My Board')
     })
 })
