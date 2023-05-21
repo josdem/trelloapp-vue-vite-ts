@@ -13,6 +13,9 @@ describe('Trello Application', () => {
       //await $('.px-2.mt-4.w-full.h-8.bg-white.rounded-sm.border-2').setValue('My Board')
 
       //Select by id - Sparingly: Better than class but still coupled to style or JS events.
-      await $('#board-input').setValue('My Board')
+      //await $('#board-input').setValue('My Board')
+
+      //Select by name - Sparingly: Coupled to the name attribute which has HTML semantics.
+      await $('[name="newBoard"]').setValue('My Board')
     })
 })
