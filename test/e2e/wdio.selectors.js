@@ -1,11 +1,11 @@
 import { $, browser } from '@wdio/globals'
 
-describe('Trello Application', () => {
+describe('Trello Application show selectors', () => {
     before(async () => {
       await browser.url('http://localhost:3000')
     })
 
-    it('validates expected board', async () => {
+    it('validates different selector types', async () => {
       //Select by component - Never: Too generic no context.
       //await $('input').setValue('My Board')
 
