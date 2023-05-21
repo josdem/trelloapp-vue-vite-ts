@@ -8,6 +8,7 @@
       <input
         v-model="newBoardTitle"
         type="text"
+        id="board-input"
         data-cy="first-board"
         class="px-2 mt-4 w-full h-8 bg-white rounded-sm border-2"
         placeholder="Name of your first board"
