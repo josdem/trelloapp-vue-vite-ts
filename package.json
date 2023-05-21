@@ -10,7 +10,8 @@
     "wdio:selectors": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/App.test.ts",
     "wdio:shadow": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/Timer.test.ts",
     "wdio:shadow:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/shadow.e2e.ts",
-    "wdio:applitools": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/applitools.e2e.ts"
+    "wdio:applitools": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/applitools.e2e.ts",
+    "wdio:selectors:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.selectors.js"
   },
   "dependencies": {
     "@4tw/cypress-drag-drop": "^2.1.0",

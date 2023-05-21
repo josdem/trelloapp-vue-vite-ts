@@ -1,5 +1,13 @@
 {
-  "boards": [],
+  "boards": [
+    {
+      "name": "Let the Engineers Speak",
+      "user": 0,
+      "starred": false,
+      "created": "2023-05-21",
+      "id": 1
+    }
+  ],
   "cards": [],
   "lists": [],
   "users": []
