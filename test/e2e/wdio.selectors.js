@@ -19,6 +19,9 @@ describe('Trello Application', () => {
       //await $('[name="newBoard"]').setValue('My Board')
 
       //Select by custom data attribute - Good: Decoupled and not connected to a11y
-      await $('[data-cy="first-board"]').setValue('My Board')
+      //await $('[data-cy="first-board"]').setValue('My Board')
+
+      //Select by a11y selector - Best: Resembles how the user interacts with the page
+      (await $('aria/Name of your first board')).setValue('My Board')
     })
 })
