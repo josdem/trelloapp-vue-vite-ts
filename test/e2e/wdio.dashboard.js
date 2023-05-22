@@ -14,6 +14,6 @@ describe('Trello Application create dashboard', () => {
 
     it('can add a todo on the board', async () => {
       await $('[data-cy="add-list-input"]').setValue('Add Facebook link')
-      await $('aria/Add a list').click()
+      await $('aria/Add list').click()
     })
 })
