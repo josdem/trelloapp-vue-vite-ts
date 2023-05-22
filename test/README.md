@@ -22,6 +22,8 @@ Run example as e2e test:
 
 ```sh
 npm run wdio:shadow:e2e
+npm run wdio:selectors:e2e
+npm run wdio:dashboard:e2e
 ```
 
 ## Applitools Example
