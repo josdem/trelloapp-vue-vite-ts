@@ -13,7 +13,7 @@ describe('Trello Application create dashboard', () => {
     })
 
     it('creates a list on the board', async () => {
-      await $('[data-cy="add-list-input"]').setValue('Add Facebook link')
+      await $('[data-cy="add-list-input"]').setValue('Add a shoping list')
       await $('aria/Add list').click()
       await $('[data-cy="new-card"]').isExisting()
     })
