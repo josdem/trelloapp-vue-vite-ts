@@ -12,8 +12,9 @@ describe('Trello Application create dashboard', () => {
       await expect(browser).toHaveUrlContaining('/board/1')
     })
 
-    it('adds a list on the board', async () => {
+    it('creates a list on the board', async () => {
       await $('[data-cy="add-list-input"]').setValue('Add Facebook link')
       await $('aria/Add list').click()
+      await $('[data-cy="new-card"]').isExisting()
     })
 })
