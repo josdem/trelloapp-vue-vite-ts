@@ -1,4 +1,4 @@
-import { $, browser } from '@wdio/globals'
+import { $, browser, expect } from '@wdio/globals'
 import { Key } from 'webdriverio'
 
 describe('Trello Application create dashboard', () => {
@@ -15,7 +15,6 @@ describe('Trello Application create dashboard', () => {
     it('creates a list on the board', async () => {
       await $('[data-cy="add-list-input"]').setValue('Add a shopping list')
       await $('aria/Add list').click()
-      //Validates this element is present on the page
-      $('[data-cy="new-card"]')
+      await expect($('[data-cy="new-card"]')).toBePresent()
     })
 })
