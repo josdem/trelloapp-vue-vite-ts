@@ -12,7 +12,8 @@
     "wdio:shadow:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/shadow.e2e.ts",
     "wdio:applitools": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/applitools.e2e.ts",
     "wdio:selectors:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.selectors.js",
-    "wdio:dashboard:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.dashboard.js"
+    "wdio:dashboard:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.dashboard.js",
+    "wdio:text:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.text.js"
   },
   "dependencies": {
     "@4tw/cypress-drag-drop": "^2.1.0",
