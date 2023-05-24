@@ -29,4 +29,11 @@ describe('Trello Application create dashboard', () => {
       await browser.keys(Key.Enter)
       await expect($$('div[data-cy="card"]')).toBeElementsArrayOfSize(3)
     })
+
+    it('can delete a board', async () => {
+      await $('[data-cy="list-options"]').click()
+      await $('[data-cy="delete-list"]').click()
+      await expect($('[data-cy="create-list"]')).toBePresent()
+    })
+  
 })
