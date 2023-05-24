@@ -18,7 +18,7 @@ describe('Trello Application create dashboard', () => {
       await expect($('[data-cy="new-card"]')).toBePresent()
     })
 
-    it('can add a card to the list', async () => {
+    it('adds cards to the list', async () => {
       await $('[data-cy="new-card"]').click()
       await $('aria/Enter a title for this card...').setValue('Buy milk')
       await browser.keys(Key.Enter)
