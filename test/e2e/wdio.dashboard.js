@@ -20,7 +20,7 @@ describe('Trello Application create dashboard', () => {
 
     it('adds cards to the list', async () => {
       await $('[data-cy="new-card"]').click()
-      await $('aria/Enter a title for this card...').setValue('Buy milk')
+      await $('aria/Enter a title for this card...').setValue('Almond Milk')
       await browser.keys(Key.Enter)
       await expect($$('div[data-cy="card"]')).toBeElementsArrayOfSize(1)
       await $('aria/Enter a title for this card...').addValue('Brussel Sprouts')
