@@ -7,10 +7,6 @@
     "typecheck": "tsc --noEmit -p . && vue-tsc --noEmit && echo \"✅ All file types passed!\"",
     "selectorcheck": "./scripts/getSelectors.sh",
     "postinstall": "echo \"Trello app was installed sucessfully ✅\nYou can now run it by typing:\nnpm start\"",
-    "wdio:selectors": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/App.test.ts",
-    "wdio:shadow": "wdio run ./test/wdio.unit.conf.ts --spec ./test/unit/Timer.test.ts",
-    "wdio:shadow:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/shadow.e2e.ts",
-    "wdio:applitools": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/applitools.e2e.ts",
     "wdio:selectors:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.selectors.js",
     "wdio:dashboard:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.dashboard.js",
     "wdio:text:e2e": "wdio run ./test/wdio.e2e.conf.ts --spec ./test/e2e/wdio.text.js"
