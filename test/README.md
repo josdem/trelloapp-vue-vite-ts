@@ -6,7 +6,7 @@
 npm run wdio:selectors:e2e -- --watch
 ```
 
-## Run example as e2e test:
+## Run example as e2e test
 
 ```sh
 npm run wdio:selectors:e2e
