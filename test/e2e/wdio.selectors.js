@@ -13,7 +13,7 @@ describe('Trello Application show selectors', () => {
       //await $('.px-2.mt-4.w-full.h-8.bg-white.rounded-sm.border-2').setValue('My Board')
 
       //Select by query selector - Sparingly: Difficult to write.
-      await $(() => document.querySelector('input')).setValue('My Board')
+      //await $(() => document.querySelector('input')).setValue('My Board')
 
       //Select by id - Sparingly: Better than class but still coupled to style or JS events.
       //await $('#board-input').setValue('My Board')
@@ -25,6 +25,6 @@ describe('Trello Application show selectors', () => {
       //await $('[data-cy="first-board"]').setValue('My Board')
 
       //Select by a11y selector - Best: Resembles how the user interacts with the page
-      //(await $('aria/Name of your first board')).setValue('My Board')
+      (await $('aria/Name of your first board')).setValue('My Board')
     })
 })
