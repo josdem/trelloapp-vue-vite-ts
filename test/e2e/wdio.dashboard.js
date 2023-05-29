@@ -1,9 +1,10 @@
 import { $, browser, expect } from '@wdio/globals'
 import { Key } from 'webdriverio'
+import constants from '../../constants'
 
 describe('Trello Application create dashboard', () => {
     before(async () => {
-      await browser.url('http://localhost:3000')
+      await browser.url(`http://localhost:${constants.APP}`)
     })
 
     it('creates initial board', async () => {
