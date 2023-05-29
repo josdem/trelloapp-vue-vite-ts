@@ -14,3 +14,5 @@ To install, simply clone this project and
 2. `npm start`
 
 What you can see here is pretty much still work in progress and far from done. This is my Playground, don’t judge the code quality.
+
+**Note:** To run [WDIO](https://webdriver.io/) test cases go to [README](test/README.md)
